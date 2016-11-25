@@ -32,8 +32,6 @@ export default class MainController {
   }
 
   addStation (station) {
-    console.log(station)
-
     const stationMarkerOptions = {
       radius: 50
     }
@@ -51,7 +49,6 @@ export default class MainController {
   loadStations () {
     this.stationsService.getData()
       .then((stations) => {
-        console.log(stations)
         this.setStations(stations)
       })
   }
